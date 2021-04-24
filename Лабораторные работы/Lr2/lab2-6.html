@@ -1,0 +1,55 @@
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 6</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var u1 = 0;
+		var u2 = 0;
+		var u3 = 0;
+		
+		function q1(){
+		u1 = u1+1;
+		}
+
+		function q2(){
+		u2 = u2+1;
+}
+
+		function q3(){
+		u3 = u3+1;
+}
+
+		function result(){
+		var rez = u1+u2+u3;
+		var u1_pct = Math.round((u1/rez)*100);
+		var u2_pct = Math.round((u2/rez)*100);
+		var u3_pct = Math.round((u3/rez)*100);
+		$("#r").html("Всего проголосовало: "+rez);
+		$("#u_1").html("За одного проголосовало: "+u1_pct+"%");
+		$("#u_2").html("За двух проголосовало: "+u2_pct+"%");
+		$("#u_3").html("За трёх проголосовало: "+u3_pct+"%");
+}
+	</script>
+
+	<style>
+		body{
+			background-color: #00FF7F;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<h1>Сколько нужно угатушников чтобы закрутить лампочку?</h1></br>
+		<input class="button" type="button" onclick="q1()" id="rad1" value="Один">
+		<input class="button" type="button" onclick="q2()" id="rad2" value="Два">
+		<input class="button" type="button" onclick="q3()" id="rad3" value="Три"></br></br>
+		<input class="result" type="button" id="rez" onclick="result()" value="Результаты">
+		<p id="r"></p>
+		<p id="u_1"></p>
+		<p id="u_2"></p>
+		<p id="u_3"></p>
+	</form>
+	<a href="menu.html">Меню</a>
+</body>
+</html>

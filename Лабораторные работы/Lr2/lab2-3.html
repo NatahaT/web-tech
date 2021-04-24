@@ -1,0 +1,67 @@
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 3</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>
+	function up(){
+		$("#pic").animate({top: "50px"}, 700);
+}
+
+	function down(){
+		$("#pic").animate({top: "600px"}, 700);
+}
+
+	function left(){
+		$("#pic").animate({left: "50px"}, 700);
+}
+
+	function rigth(){
+		$("#pic").animate({left: "1200px"}, 700);
+}
+	</script>
+
+	<style>
+		body{
+			background-image: url(plat.jpg);
+		}
+
+		.picture{
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			top: 200px;
+			left: 600px;
+		}
+		.up{
+			background-color: #FFD700;
+			width: 50px;
+			height: 50px;
+		}
+		.down{
+			background-color: #FFD700;
+			width: 50px;
+			height: 50px;
+		}
+		.left{
+			background-color: #FFD700;
+			width: 50px;
+			height: 50px;
+		}
+		.rigth{
+			background-color: #FFD700;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+
+</head>
+<body>
+	<img class="picture" src="butterfly.jpg" id="pic">
+	<input class="up" type="button" id="up" onclick="up()" value="Вверх" >
+	<input class="down" type="button" id="down" onclick="down()" value="Вниз">
+	<input class="left" type="button" id="left" onclick="left()" value="Лево">
+	<input class="rigth" type="button" id="rigth" onclick="rigth()" value="Право">
+	<a href="menu.html">Меню</a>
+</body>
+</html>
